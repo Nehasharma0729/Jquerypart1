@@ -1,0 +1,535 @@
+[7:04] Kumari Neha
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <title></title>
+
+
+</head>
+
+<body>
+
+    <!-- 1. FIRST PROGRAM IN JQUERY
+
+    <h1>hello from neha</h1>
+
+    <script src="jquery/jquery-3.6.4.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            alert(1);
+
+        });
+
+    </script>-->
+
+    <!--2. JQUERY CHAINING
+
+    <div id="box">
+
+        <h2>Text Box</h2>
+
+        <p>Lorem shampoo</p>
+
+ 
+
+    </div>
+
+    <br />
+
+    <button id="AnimateBtn">
+
+        Animate
+
+    </button>
+
+    <script src="jquery/jquery-3.6.4.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("#AnimateBtn").click(function () {
+
+                $("#box").css('background', 'pink').slideUp(2000).slideDown(2000);
+
+ 
+
+            });
+
+ 
+
+        });
+
+    </script>-->
+
+    <!--3.SELECT BY NAME, ID AND CLASS
+
+    <div id="box" class="test">
+
+        <h2>Text Box</h2>
+
+        <p>Lorem shampoo</p>
+
+ 
+
+    </div>
+
+ 
+
+    <ul id="list">
+
+        <li>ORANGE</li>
+
+        <li class="test">Banana</li>
+
+        <li>GRAPES</li>
+
+        <li class="test">APPLE</li>
+
+        <li>Gurav</li>
+
+    </ul>
+
+    <script src="jquery/jquery-3.6.4.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("#list").css("color", "red") /*applying css using id*/
+
+            $(".test").css("border", "2px solid red") /*applying css using class*/
+
+            $("*").css("border", "2px solid yellow") /*applying css using (*)*/
+
+ 
+
+
+
+            });
+
+    </script>-->
+
+    -->
+
+ 
+
+    <!--4.ATTRIBUTE SELECTOR HERE (TITLE IS AN ATTRIBUTE)
+
+    <div title="div1title">DIV1</div>
+
+    <br />
+
+    <p title="ptitle">this is a paragraph</p>
+
+    <br />
+
+    <div title="div2title">DIV2</div>
+
+    <br />
+
+    <span title="div1title">SPAN1</span>
+
+    <br />
+
+    <span>SPAN2</span>
+
+ 
+
+    <script src="jquery/jquery-3.6.4.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+           /* $('[title]').css('border', '5px solid green'); PUT CSS FOR ALL THE TITLE ATTRIBUTE*/
+
+            /*$('div[title]').css('border', '5px solid yellow'); apply on the div only*/
+
+          /*  $('[title="div1title"]').css('border', '5px solid pink'); those attribute is title and value is div1title*/
+
+ 
+
+        });
+
+    </script>-->
+
+    <!--5.ADVANCE SELECTOR
+
+    <div title="div1title">DIV1</div>
+
+    <br />
+
+    <p title="ptitle">this is a paragraph</p>
+
+    <br />
+
+    <div title="div2title">DIV2</div>
+
+    <br />
+
+    <span title="div1title">SPAN1</span>
+
+    <br />
+
+    <span>SPAN2</span>
+
+    <br />
+
+    <h1> HELLO EVERYONE </h1>
+
+    <br />
+
+    <ul id="list">
+
+        <li>ORANGE</li>
+
+        <li class="test">Banana</li>
+
+        <li>GRAPES</li>
+
+        <li class="test">APPLE</li>
+
+        <li>Gurav</li>
+
+    </ul>
+
+    <br />
+
+    <p title="ptitle">hii this is me</p>
+
+ 
+
+    <script src="jquery/jquery-3.6.4.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            //$("div,P,h1").css('border', '5px solid green'); /*TARGET DIV P AND H1 ALL TOGETHER*/
+
+            //$("li").css('border', '5px solid yellow'); /*apply on all the list*/
+
+            //$("li:even").css('border', '5px solid pink'); /*for even list only*/
+
+            /*$("ul").css('border', '5px solid pink'); *//*for unordered list only*/
+
+            /*$("ul li").css('border', '5px solid pink'); *//*for unordered list and the list inside them only*/
+
+            /*$("p+p").css('border', '5px solid pink'); *//*FOR THOSE WHO HAVE PREVIOUS SIBLING*//* NOTWORKING  DOUBT*/
+
+            /* $("p~p").css('border', '5px solid pink'); *//*//**THOSE PARAGRAPH WHO HAVE LAST PREVIOUS SIBLING NOTWORKING*/
+
+            /*$("p:first").css('border', '5px solid pink');*/ //*//** first child of paragraph */
+
+            /*$("p:last").css('border', '5px solid pink');*/ //*//** last child of paragraph */
+
+ 
+
+
+
+        });
+
+    </script>-->
+
+    <!--6.TRAVERSING  (a) FILTERING
+
+    <div id="first">
+
+        <p>loresum ispum dolar</p>
+
+        <p>consecteur adipiscing elite</p>
+
+    </div>
+
+ 
+
+    <ul id="list">
+
+        <li>ORANGE</li>
+
+        <li>APLLE</li>
+
+        <li>BANANA</li>
+
+        <li>GRAPES</li>
+
+    </ul>
+
+    <div id="second">
+
+        <p class="test">loresum ispum dolar</p>
+
+        <p>consecteur adipiscing elite</p>
+
+    </div>
+
+ 
+
+    <script src="jquery/jquery-3.6.4.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            //$('p').first().css('background', 'gold'); /*APPLY CSS ON FIRST PARAGRAPH IN THE PAFE*/
+
+            //$('div p').first().css('background', 'gold');/*APPLY CSS ON FIRST PARAGRAPH IN THE DIV*/
+
+            //$('#second p').first().css('background', 'gold');/*APPLY CSS ON FIRST PARAGRAPH OF SECOND DIV*/
+
+            /*$('p').last().css('background', 'gold');*/ /*APPLY CSS ON LAST PARAGRAPH IN THE PAFE*/
+
+            /*$('ul li ').last().css('background', 'gold');*/ /*APPLY CSS ON LAST LIST IN THE UNORDERED LIST*/
+
+            /* $('ul li ').eq(2).css('background', 'gold');*/ /*APPLY CSS ON LAST THIRD ITEM OF LIST IN THE UNORDERED LIST*/
+
+            /*$('P').eq(2).css('background', 'gold');*/ /*APPLY CSS ON THE THIRD PARAGRAPH*/
+
+            /* $('P').eq(-1).css('background', 'gold');*/ /*APPLY CSS ON LAST THIRD PARAGRAPH*/
+
+            /*$('P').eq(-2).css('background','gold');*//*APPLY CSS ON SECOND LAST THIRD PARAGRAPH*/
+
+            /*$('P').filter('.test').css('background', 'gold');*//*APPLY CSS ON ID OF TEST THIRD PARAGRAPH*/
+
+            /*$('P').not('.test').css('background', 'gold');*//*APPLY CSS ALL THE PARAGRAPH INSTEAD OF TEST CLASS PRAGRAPH*/
+
+            /*$('ul li').slice(2).css('background', 'gold');*//*APPLY CSS ON ALL FRON SECOND LIST THAT IS BANANA*/
+
+            /*$('ul li').slice(1,3).css('background', 'gold');*//*APPLY CSS ON FIRST TILL SECOND CANT APPLY ON THIRD*/
+
+ 
+
+        });
+
+    </script>-->
+
+    <!--/*(b) Sibling TRAVERSAL*/
+
+    <h1>jQUERY SIBLINGS METHODS</h1>
+
+    <div id="outer">
+
+        <h2>Outer</h2>
+
+        <div id="Inner">
+
+            <h2>Inner</h2>
+
+            <div class="test">A</div>
+
+            <div>B</div>
+
+            <div id="child-c">C</div>
+
+            <div>D</div>
+
+            <div class="test">E</div>
+
+ 
+
+        </div>
+
+ 
+
+    </div>
+
+    <script src="jquery/jquery-3.6.4.min.js"></script>
+
+    <script>-->
+
+    <!--$(document).ready(function () {
+
+        /* $('#child-c').siblings().css('background', 'red'); *//*target c siblings ex a,b,d,e,inner*/
+
+ 
+
+        /* $('#child-c').siblings('h2').css('background', 'red'); *//*target c sibling only inner*/
+
+        /*$('#child-c').siblings('.test').css('background', 'red');*/ /*target c siblings a and e*/
+
+        /* $('#child-c').next().css('background', 'red');*/ /*target c siblings d which is next to c*/
+
+        /*$('#child-c').prev().css('background', 'red');*/ /*target c sibling b */
+
+        //$('#child-c').prevAll().css('background', 'red');*/ /*target c siblings ex a,b,inner*/
+
+        /*$('#child-c').nextAll().css('background', 'red');*/ /*target c siblings ex d,e,*/
+
+        /*$('#child-c').nextUntil('.test').css('background', 'red');*/ /*target c siblings between c and e i.e D */
+
+        /*   $('#child-c').prevUntil('.test').css('background', 'red');*/ /*target c siblings  between c and a ex b,*/
+
+ 
+
+ 
+
+ 
+
+    });-->
+
+    <!--</script>-->
+
+    /*(b) CHILD OR DESCENDANTS TRAVERSAL*/
+
+    <!--<div id="main-outer">
+
+        <h2>Main Outer</h2>
+
+        <div id="outer">
+
+            <h2>Outer</h2>
+
+            <div id="Inner">
+
+                <h2>Inner</h2>
+
+                <div>A</div>
+
+                <div class="test">B</div>
+
+                <div>C</div>
+
+                <div>D</div>
+
+                <div>E</div>
+
+ 
+
+            </div>
+
+ 
+
+        </div>
+
+ 
+
+    </div>-->
+
+ 
+
+    <!--<script src="jquery/jquery-3.6.4.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            /*$('#Inner').children().css('background', 'red');*/ //*target CHILDREN INNER i.e inner , a, b,c,d*/
+
+            /*$('#Inner').children('.test').css('background', 'red');*/ /*target c siblings ex b, who have test class*/
+
+            //$('#Inner').find('.test').css('background', 'red'); /*target find test and APPLY css/
+
+            /*$('#main-outer').find('.test').css('background', 'red');*/ /*target find test and APPLY css I.E grandchild of mainouter/
+
+ 
+
+ 
+
+
+
+});
+
+    </script>-->
+
+ 
+
+ 
+
+    <!--<div id="main-outer" style="position:relative;">
+
+        <h2>Main Outer</h2>
+
+        <div id="outer">
+
+            <h2>Outer</h2>
+
+            <div id="Inner">
+
+                <h2 id="child-head">Inner</h2>
+
+                <div>A</div>
+
+                <div>B</div>
+
+                <div id="child-c">C</div>
+
+                <div>D</div>
+
+                <div>E</div>
+
+ 
+
+            </div>
+
+ 
+
+        </div>
+
+ 
+
+    </div>
+
+    <script src="jquery/jquery-3.6.4.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            /*  $('#child-c').parent().css('background', 'red');*/ //*target parent of  child-c i.e inner*/
+
+            /*    $('#Inner').parent().css('background', 'pink');*/ //*target parent of inner  i.e outer*/
+
+            /*$('#Inner').parents().css('background', 'green');*/ //*target all the parents of c i.e inner, outer, main outer*/
+
+            /*$('#Inner').parents('#main-outer').css('background', 'pink');*/ /*target all the parent of inner i.e main outer*/
+
+            /*$('#child-c').parentsUntil('#main-outer').css('background', 'pink');*/ /*target all the parents of c i.e inner, outer*/
+
+            /*$('#Inner').parentsUntil('#main-outer').css('background', 'pink');*/ /*target all the parents of c i.e  outer*/
+
+            /* $('#Inner').offsetParent().css('background', 'green');*/ /*target only the background*/
+
+            /*$('#child-c').offsetParent().css('background', 'green');*//* target only parent who have postition property*/
+
+            /*$('#child-c').closest('div').css('background', 'green');*/ /*it select it self because it is only the closet*/
+
+ 
+
+    
+
+ 
+
+ 
+
+        });
+
+    </script>-->
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+</body>
+
+</html>
+
+
